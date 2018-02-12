@@ -1,0 +1,17 @@
+digraph {
+	graph [nodesep=.2,ranksep=.2,splines=line,bgcolor="transparent",layout="dot"]
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle,style=filled,fillcolor="#ffffff",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=0.5,margin=0,fontsize=18]
+
+	5 -> 3
+	5 -> c [style="invis"]
+	5 -> 7
+	3 -> 2
+	3 -> b [style="invis"]
+	3 -> z
+	7 -> {z a} [style="invis"]
+	7 -> 8
+
+	z [label="5"]
+	a,b,c [style="invis"]
+}

@@ -1,0 +1,10 @@
+graph {
+	graph [bgcolor="transparent",layout="circo"]
+	node [shape=circle,style=filled,fillcolor="#ff0000",label="",penwidth=0]
+	a -- {b c d e f g}
+	b -- {c d e f g}
+	c -- {d e f g}
+	d -- {e f g}
+	e -- {f g}
+	f -- g
+}

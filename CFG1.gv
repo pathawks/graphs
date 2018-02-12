@@ -1,0 +1,31 @@
+digraph {
+	graph [nodesep=.66,ranksep=.5,splines=line,bgcolor="transparent"]
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle,style=filled,fillcolor="#cccccc",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=0.5,margin=0,fontsize=18,label="S"]
+
+	a -> {b c d}
+	b -> {e f g}
+	d -> {q r s}
+	e -> {h i j}
+	g -> p
+	i -> {k l m}
+	k -> n
+	m -> o
+	q -> {t u v}
+	s -> {A B C}
+	t -> w
+	v -> x
+	B -> {D E F}
+	D -> G
+	F -> H
+
+	c       [label="-",fillcolor="#ffffff"]
+	f,u     [label="*",fillcolor="#ffffff"]
+	h,A     [label="(",fillcolor="#ffffff"]
+	j,C     [label=")",fillcolor="#ffffff"]
+	l,E     [label="+",fillcolor="#ffffff"]
+	n,p,G,H [label="x",fillcolor="#ffffff"]
+	o,x     [label="y",fillcolor="#ffffff"]
+	r       [label="/",fillcolor="#ffffff"]
+	w       [label="z",fillcolor="#ffffff"]
+}

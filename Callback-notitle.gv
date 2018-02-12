@@ -1,0 +1,29 @@
+digraph Pipeline {
+        rankdir=LR
+        labeljust="l"
+        style=filled
+        color=lightgrey
+        bgcolor=transparent
+        node [style=filled,fillcolor=white,color=white]
+        subgraph clusterApplication {
+                label="Application program"
+                program [label="Main program",shape=rect]
+                callback [label="Callback function"]
+# invisible content to match layout with intention:
+                edge [style=invis]
+                node [style=invis,label="",width=0.01,height=0.01]
+                program -> libpad
+                libpad -> callback
+        }
+
+        subgraph clusterLibrary {
+                margin="5,5"
+                label="Software library"
+                labelloc=b
+                node [color=blue,fontcolor=blue]
+                function [label="Library function"]
+        }
+
+        program -> function [label="calls"]
+        function -> callback [label="calls"]
+}

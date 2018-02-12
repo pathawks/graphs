@@ -1,0 +1,62 @@
+digraph Pipeline {
+        rankdir=LR
+        labeljust="l"
+        style=filled
+        color=lightgrey
+        bgcolor=transparent
+        node [style=filled,fillcolor=white,color=white]
+
+# phase 1: registration
+
+        subgraph clusterApplication {
+                style=filled
+                label="Application program (Initial step)"
+                program [label="Main program",shape=rect]
+                callback [label="Callback function"]
+# invisible content to match layout with intention:
+                edge [style=invis]
+                node [style=invis,label="",width=0.01,height=0.01]
+                program -> callback
+        }
+
+        subgraph clusterLibrary {
+                margin="5,5"
+                label="Software platform"
+                labelloc=b
+                node [color=blue,fontcolor=blue]
+                loop [label="Main loop",shape=rect]
+                function [label="Registration function"]
+                loop -> function [style=invis]
+        }
+        program -> function [label="calls",weight=100]
+
+# phase 2: callback
+
+        subgraph clusterApplication2 {
+                label="Application program (Later steps)"
+                program2 [label="Main program",shape=rect]
+                callback2 [label="Callback function"]
+# invisible content to match layout with intention:
+                edge [style=invis]
+                node [style=invis,label="",width=0.01,height=0.01]
+                program2 -> callback2
+        }
+
+        subgraph clusterLibrary2 {
+                margin="5,5"
+                label="Software platform"
+                labelloc=b
+                node [color=blue,fontcolor=blue]
+                loop2 [label="Main loop",shape=rect]
+                function2 [label="Registration function"]
+
+                loop2 -> function2 [style=invis]
+        }
+
+
+        callback2
+        loop2 -> callback2 [label="calls"]
+
+# vertical constraint between phases
+        program -> callback2 [style=invis]
+}

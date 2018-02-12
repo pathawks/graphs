@@ -1,0 +1,26 @@
+digraph {
+	rank="LR"
+	graph [nodesep=.4,ranksep=.4,splines=line,bgcolor="transparent"]
+	edge [penwidth=.75,arrowsize=.75,fontname="Source Code Pro,Ubuntu Mono",fontsize=18]
+	node [shape=circle,style=filled,fillcolor="#ffffff",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=0.5,margin=0,fontsize=18]
+
+	subgraph {
+		rank=same
+		b -> d -> f [label="1"]
+	}
+	subgraph {
+		rank=same
+		start [style="invis",width=0]
+		start -> a
+		a -> c [label="1"]
+		c -> e [label="0"]
+	}
+	a : ne -> b : se [label=" 0"]
+	b : sw -> a : nw [label=" 0"]
+	c -> f [label="1"]
+	d -> e [label="0"]
+	e -> e [label="  0"]
+	e -> f [label="  1"]
+	f -> f [label="  0,1"]
+	c,d,e [peripheries=2]
+}

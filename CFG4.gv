@@ -1,0 +1,16 @@
+digraph {
+	graph [nodesep=.66,ranksep=.5,splines=line,bgcolor="transparent"]
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle,style=filled,fillcolor="#cccccc",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=0.5,margin=0,fontsize=18,label="S"]
+
+	a -> {b c d}
+	b -> {e f g}
+	e -> h
+	g -> i
+	d -> j
+
+	c,f [label="+"]
+	h,i [label="1"]
+	j [label="a"]
+	c,f,h,i,j [fillcolor="#ffffff"]
+}

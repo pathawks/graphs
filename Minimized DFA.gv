@@ -1,0 +1,21 @@
+digraph {
+	rank="LR"
+	graph [nodesep=.4,ranksep=.4,splines=line,bgcolor="transparent"]
+	edge [penwidth=.75,arrowsize=.75,fontname="Source Code Pro,Ubuntu Mono",fontsize=18]
+	node [shape=ellipse,style=filled,fillcolor="#ffffff",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=1,margin=0,fontsize=18]
+
+	subgraph {
+		rank=same
+		start [style="invis",width=0]
+		start -> a
+		a [label="a,b"]
+		b [label="c,d,e",color="black:black",peripheries=2]
+		c [label="f"]
+	}
+
+	a -> b [label="1"]
+	b -> c [label="a"]
+	a:ne -> a:nw [label="0"]
+	b:ne -> b:nw [label="0"]
+	c:ne -> c:nw [label="0,1"]
+}

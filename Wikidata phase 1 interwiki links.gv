@@ -1,0 +1,6 @@
+graph {
+	graph [bgcolor="transparent",layout="circo"]
+	node [shape=circle,style=filled,fillcolor="#ff0000",label="",penwidth=0]
+	center [fillcolor="#0000ff"]
+	center -- {a b c d e f g}
+}

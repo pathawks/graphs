@@ -1,0 +1,18 @@
+graph {
+	graph [bgcolor="transparent",layout="dot"]
+	node [shape=none,penwidth=0,fontname="Source Code Pro,Ubuntu Mono",fontsize=18,margin=0]
+	TP -- {DP VP}
+	DP -- {∅ N}
+	N -- He
+	VP -- {V PP}
+	V -- jumped
+	PP -- {P DP2}
+	P -- off
+	DP2 -- {D N2}
+	D -- the
+	N2 -- step
+	DP2 [label="DP"]
+	N2 [label="N"]
+	TP -- {N V} [style="invis"]
+	VP -- P [style="invis"]
+}

@@ -1,0 +1,24 @@
+digraph {
+	graph [nodesep=.1,ranksep=0,splines=line,bgcolor="transparent",layout="dot"]
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle,style=filled,fillcolor="#ffffff",fontname="Source Code Pro,Ubuntu Mono",penwidth=1.5,width=0.5,margin=0,fontsize=18]
+
+	51 -> {17}
+	51 -> {a b} [style="invis"]
+	51 -> 72
+	17 -> 12
+	17 -> c [style="invis"]
+	17 -> 23
+	12 -> 9
+	12 -> h [style="invis"]
+	12 -> 14
+	23 -> 19
+	23 -> {d g} [style="invis"]
+	72 -> 54
+	72 -> f [style="invis"]
+	72 -> 76
+	54 -> e [style="invis"]
+	54 -> 67
+
+	a,b,c,d,e,f,g,h [style="invis"]
+}

@@ -1,0 +1,23 @@
+graph {
+	graph [nodesep=.4,ranksep=.4,splines=line,bgcolor="transparent",layout="dot"]
+	edge [penwidth=1]
+	node [shape=circle,style=filled,fillcolor="#cccccc",label="",fontname="Source Code Pro,Ubuntu Mono",penwidth=1,width=0.5,margin=0,fontsize=18]
+
+	subgraph {
+		rank=same
+		a -- b -- c
+	}
+	subgraph {
+		rank=same
+		d e f
+	}
+	subgraph {
+		rank=same
+		g -- h -- i
+	}
+
+	a -- d -- g
+	c -- f -- i
+	a -- e -- i
+	c -- e -- g
+}

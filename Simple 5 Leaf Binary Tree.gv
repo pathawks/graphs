@@ -1,0 +1,18 @@
+digraph {
+	nodesep=.66
+	ranksep=0
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle;style=filled;fillcolor="#ffffff",fontname="Source Code Pro",penwidth=1.5;width=0.5;margin=0,fontsize=18];
+
+	1 2
+
+	subgraph {
+		node [fillcolor="#eeeeee",label=""];
+		g1 -> g2 -> g3 -> g4
+	}
+
+	g1 -> 1
+	g2 -> 2
+	g3 -> 3
+	g4 -> {4 5}
+}
