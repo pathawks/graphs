@@ -7,3 +7,6 @@ default: $(svgs)
 
 clean:
 	rm -f *.svg
+
+homebrew:
+	brew install svgo graphviz --with-librsvg
