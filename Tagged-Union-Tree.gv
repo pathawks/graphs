@@ -1,0 +1,11 @@
+digraph {
+	nodesep=.6
+	ranksep=0
+	graph [splines=line,bgcolor=transparent]
+	edge [penwidth=.75,arrowsize=.75]
+	node [shape=circle,style=filled,fillcolor="#ffffff",fontname="Source Code Pro,Ubuntu Mono,DejaVu Sans Mono,monospace",penwidth=1.5,width=0.5,margin=0,fontsize=18]
+
+	5 -> {1 3}
+	3 -> {a [style=invis]} [penwidth=0,arrowsize=0]
+	3 -> 4
+}
