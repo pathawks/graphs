@@ -14,7 +14,7 @@ digraph {
 	}
 
 	a -> b [label="1"]
-	b -> c [label="a"]
+	b -> c [label="1"]
 	a:ne -> a:nw [label="0"]
 	b:ne -> b:nw [label="0"]
 	c:ne -> c:nw [label="0,1"]
